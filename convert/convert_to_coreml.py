@@ -11,7 +11,7 @@ Usage:
         --checkpoint /path/to/brats_ckpt_epoch150.pt \
         --output-dir ./models
 
-Runs on CPU. No GPU needed. Tested on Google Colab (Linux) and macOS.
+Runs on CPU. No GPU needed. Tested on Google Colab (Linux) .
 """
 
 import argparse
