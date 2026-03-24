@@ -1,6 +1,6 @@
 # brats-coreml-swift
 
-CoreML conversion and Swift inference wrapper for a 3D U-Net trained on BraTS 2020. Takes a PyTorch checkpoint, converts to CoreML (.mlpackage) with optional weight palettization, and provides a Swift library for running brain lesion segmentation on macOS.
+CoreML conversion and Swift inference wrapper for the BraTS 2020 3D U-Net. Converts a PyTorch checkpoint to CoreML with optional weight palettization(FP16, Int8, Int4) and wraps it in a Swift Package for macOS inference.
 
 ![Model size comparison](images/model_size_comparison.png)
 
