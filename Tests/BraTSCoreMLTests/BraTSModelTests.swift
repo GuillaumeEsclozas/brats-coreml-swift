@@ -1,5 +1,4 @@
 import XCTest
-import CoreML
 @testable import BraTSCoreML
 
 final class BraTSModelTests: XCTestCase {
@@ -65,13 +64,14 @@ final class BraTSModelTests: XCTestCase {
     }
 
     func testRealModelLoadAndPredict() throws {
-        guard let modelsURL = Bundle.module.url(
-            forResource: "models", withExtension: nil
-        ) else {
-            throw XCTSkip("models directory not found in test bundle, skipping integration test")
-        }
+        let testFile = URL(fileURLWithPath: #file)
+        let repoRoot = testFile
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
 
-        let mlpackageURL = modelsURL
+        let mlpackageURL = repoRoot
+            .appendingPathComponent("models")
             .appendingPathComponent("brats_unet3d_int4.mlpackage")
 
         guard FileManager.default.fileExists(atPath: mlpackageURL.path) else {

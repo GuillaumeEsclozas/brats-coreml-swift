@@ -21,10 +21,7 @@ let package = Package(
         .testTarget(
             name: "BraTSCoreMLTests",
             dependencies: ["BraTSCoreML"],
-            path: "Tests/BraTSCoreMLTests",
-            resources: [
-                .copy("../../../models")
-            ]
+            path: "Tests/BraTSCoreMLTests"
         ),
     ]
 )
