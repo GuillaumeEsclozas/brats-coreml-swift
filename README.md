@@ -1,5 +1,7 @@
 # brats-coreml-swift
 
+![CI](https://github.com/GuillaumeEsclozas/brats-coreml-swift/actions/workflows/ci.yml/badge.svg)
+
 CoreML conversion and Swift inference wrapper for the BraTS 2020 3D U-Net. Converts a PyTorch checkpoint to CoreML with optional weight palettization(FP16, Int8, Int4) and wraps it in a Swift Package for macOS inference.
 
 ![Model size comparison](images/model_size_comparison.png)
